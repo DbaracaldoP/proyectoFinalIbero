@@ -1,3 +1,8 @@
+#esta es para ignorar el credenciales.js
+credenciales.js
+
+
+# de aqui para bajo es lo que tomo del inicial
 # Prerequisites
 *.d
 
