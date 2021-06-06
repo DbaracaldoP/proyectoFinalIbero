@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="../archivos/myStyle.css">
+    <link rel="shortcut icon" href="../multimedia/favicon.png" type="image/x-icon">
+    <title>PANISOFT</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid sectionNav">
+            <div class="w-25  p-3" style="background-color: #ecf19e;">
+                <div class="iconoMenuFijo">
+                    <img src="../multimedia/logo02.png" alt="iconoMenu" width="140px" height="70px">
+                </div>
+            </div>
+            <div class="w-50 p-3 " style="background-color: #ecf19e;">
+                <a class="nav-link active" aria-current="page" href="../index.html">
+                    <h1>PANISOF</h1>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="bodega.html#posiBodega" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Bodega
+                            </a>
+                            <ul class="dropdown-menu fontLi" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item fontLi" href="bodega.html#proveeBodega">Proveedor</a></li>
+                                <li><a class="dropdown-item fontLi" href="bodega.html#pedidBodega">Pedidos</a></li>
+                                <li><a class="dropdown-item fontLi" href="bodega.html#compBodega">Compra</a></li>
+                                <li><a class="dropdown-item fontLi" href="bodega.html#cosBodega">Costo Bodega</a></li>
+                                <li><a class="dropdown-item fontLi" href="bodega.html#consuBodega">Consumo</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="produccion.html#posiProduccion" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Producción
+                        </a>
+                            <ul class="dropdown-menu fontLi" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item fontLi" href="produccion.html#produPanaderia">Panadería</a></li>
+                                <li><a class="dropdown-item fontLi" href="produccion.html#produBiscocheria">Biscochería</a></li>
+                                <li><a class="dropdown-item fontLi" href="produccion.html#produPasteleria">Patelería</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="contactenos.html#posiCOntacte" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Contactenos
+                        </a>
+                            <ul class="dropdown-menu fontLi" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item fontLi" href="contactenos.html">Root</a></li>
+                                <li><a class="dropdown-item fontLi" href="contactenos.html">Correo</a></li>
+                            </ul>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 col-md-2">
+                <!--es para la seccion de noticias e interes-->
+                <button class="btn btn-primary classButton" id="posiProduccion" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Interes</button>
+
+                <div class="offcanvas offcanvas-end" style="background-color: #ecf19e;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Interes</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <section class="sectionInfo">
+                            <div>Cursos</div>
+                            <p>Destinado a investigación mercado</p>
+                            <div>Recetas</div>
+                            <p>Algunas recetas de interes subidas</p>
+                            <div>Tips</div>
+                            <p>Consejos de temperatura y almacenamiento</p>
+                            <div>Noticias</div>
+                            <p>Curiosidades para la panificación</p>
+                        </section>
+                    </div>
+                </div>
+                <!--para el navegador lateral-->
+                <button class="btn btn-primary classButton" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                     Sub Menu
+                </button>
+
+                <div class="offcanvas offcanvas-start" style="background-color: #ecf19e;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Seleccione</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" style="background-color: #ecf19e;">
+                        <div class="dropdown mt-3">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                Sub menu producción
+                            </button>
+                            <ul class="dropdown-menu fontLi" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item fontLi" href="#admNomina">Nomina</a></li>
+                                <li><a class="dropdown-item fontLi" href="#adminGloba">Global</a></li>
+                                <li><a class="dropdown-item fontLi" href="#adminGrafica">Graficas</a></li>
+                                <li><a class="dropdown-item fontLi" href="#adminCosto">Costos</a></li>
+                                <li><a class="dropdown-item fontLi" href="#adminGastos">Gastos</a></li>
+                                <li><a class="dropdown-item fontLi" href="#adminHistoria">Historial</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-md-10">
+                <section class="menuGeneral">
+                    <hr>
+                    <article class="conteGeneral" id="admNomina">
+                        <h2><strong>Nomina</strong></h2>
+                        <p>En esta sección se ingresara el personal y se tendrá una vista global de todos los empleados asi como la totalidad de obligaciones que contraiga, se subdivide en áreas para asi costear mejor los productos. </p>
+                        <img src="../multimedia/nomina.png" alt="planilla nomina">
+                    </article>
+                    <hr>
+                    <article class="conteGeneral" id="adminGlobal">
+                        <h2><strong>Global</strong></h2>
+                        <p>En esta sección encontraremos el estado de resultados de la empresa en una forma generalizada para un mejor entendimiento; la presentación es una parte sin culminar, pero se ve como seria al final de sumarle todas partes operacionales
+                            de la empresa.
+                        </p>
+                        <img src="../multimedia/global.png" alt="planilla global">
+                    </article>
+                    <hr>
+                    <article class="conteGeneral" id="adminGrafica">
+                        <h2><strong>Graficas</strong></h2>
+                        <p>Para una mejor comprensión en el sistema de resultados para el dueño, se presenta una forma básica y simple para que observe su empresa en el tiempo sea mensual o anual.</p>
+                        <img src="../multimedia/grafica.png" alt="planilla grafica">
+                    </article>
+                    <hr>
+                    <article class="conteGeneral" id="adminCosto">
+                        <h2><strong>Costos</strong></h2>
+                        <p>Este es un ejemplo del sistema de costos aplicado a la producción declarada por su fabricación, anexándole los gastos indirectos. Existen mas ejemplos sobre este sistema aplicado a las diferentes áreas.</p>
+                        <img src="../multimedia/globalpanaderia.png" alt="planilla costo bodega">
+                    </article>
+                    <hr>
+                    <article class="conteGeneral" id="adminGastos">
+                        <h2><strong>Gastos</strong></h2>
+                        <p>Otro ejemplo de gatos esta vez aplicado al sistema de transporte de la empresa para las tiendas de reparto.</p>
+                        <img src="../multimedia/ruta.png" alt="planilla cosumo bodega">
+                    </article>
+                    <hr>
+                    <article class="conteGeneral" id="adminHistoria">
+                        <h2><strong>Historial</strong></h2>
+                        <p>Una forma mas simple de ver como es el sistema de resultados, y el santo grial de todo esto, ya que muestra sobre los datos de fabricación, gastos y costos detallado por cada producto que se fabrica dando una visión generalizada
+                            y permitiendo la toma de decisiones para una mayor rentabilidad de la empresa.</p><br>
+                        <p>Cabe notar que después de todo este ejersicio y ver el cuadro de resultados la dirección tomo una meta de incremento y modificación sobre los productos que a pesar de su volumen no estaban generando mucha utilidad, cada peso cuenta.</p>
+                        <img src="../multimedia/generalpoductos.png" alt="planilla cosumo bodega">
+                    </article>
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>
+<footer>
+
+    <hr> Creacion <strong>HARBEY BARACALDO</strong> <br>Proyecto final con colaboracion de <br><strong>BIT IBEROAMERICA</strong>
+    <hr>
+
+</footer>
+
+</html>

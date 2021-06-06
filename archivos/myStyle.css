@@ -1,0 +1,223 @@
+body {
+    border: 2px peru solid;
+    letter-spacing: 1.5px;
+    margin: 5px 10px;
+    background-color: #fcfde4;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+h1 {
+    color: rgb(9, 75, 26);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-align: center;
+    align-content: center;
+    font-size: 40px;
+}
+
+h2 {
+    color: rgb(9, 75, 26);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    align-content: center;
+    letter-spacing: 3px;
+}
+
+.iconoMenuFijo img {
+    width: 90px;
+    height: auto;
+    margin: 0px;
+}
+
+.iconoMenuFijo img:hover {
+    width: 120px;
+    transition: all 1s;
+}
+
+.sectionNav {
+    background-color: #ecf19e;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.fontLi {
+    background-color: #ecf19e;
+}
+
+.fontLi a:hover {
+    background-color: rgb(223, 221, 111);
+}
+
+.classButton {
+    background-color: #ecf19e;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: rgb(9, 75, 26);
+}
+
+.mainSection {
+    background-color: #fcfde4;
+    display: flex;
+    margin: 5% 3% 5% 3%;
+}
+
+.articleSection {
+    background-color: #ecf390;
+    height: 600px;
+    margin: 0px 5px 0px 5px;
+    justify-content: center;
+}
+
+.pSection {
+    margin: 20px;
+    text-align: justify;
+    width: 85%;
+    padding: 2 10%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.imgSection {
+    width: 80%;
+    height: 40%;
+    margin: 5px 10px 3px 30px;
+}
+
+@media(max-width:920px) {
+    .mainSection {
+        flex-direction: column;
+    }
+}
+
+
+/*seccion de descripcion index*/
+
+.descriptionSection {
+    display: flex;
+    background-color: #ecf19e;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.descriptionSection h2:hover {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 40px;
+    transition: all 1s;
+}
+
+.descriptionSection p {
+    padding: 3%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    text-align: justify;
+}
+
+
+/*pagina bodega*/
+
+.bodyGeneral {
+    display: flex;
+    width: 98%;
+    height: auto;
+    margin: 10px;
+}
+
+.menuGeneral {
+    width: 98%;
+    height: auto;
+    margin: 10px;
+}
+
+.sectionInfo {
+    background-color: #ecf19e;
+    margin: 5px;
+    text-align: right;
+}
+
+.sectionInfo div {
+    font-size: 25px;
+    height: 40px;
+}
+
+
+/*para el submenu de bodega*/
+
+.divClassMenuGeneral {
+    top: 200px;
+    left: 8px;
+    background-color: #ecf390;
+    width: auto;
+    height: 280px;
+    margin-left: 6px;
+}
+
+.divClassMenuGeneral a {
+    display: flex;
+    display: block;
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: left;
+}
+
+
+/*estaba dedicado a un chek box, pero no pude hacerlo que saliera de un aimagen */
+
+
+/*invesitgue pero requiere funciones en javaScript*/
+
+.bottonMenuLateral {
+    background-color: #ecf19e;
+    width: 140px;
+    height: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.divClassMenuGeneral a:hover {
+    background-color: rgb(223, 221, 111);
+}
+
+.submenu:checked~.divClassMenuGeneral {
+    display: block;
+}
+
+.menuGeneral img {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.menuGeneral p {
+    text-align: justify;
+}
+
+
+/*seccion del cuerpo*/
+
+.conteGeneral {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.sectionInfo div:hover {
+    background-color: rgb(223, 221, 111);
+}
+
+footer {
+    margin: 3px 3px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    color: rgb(15, 37, 19);
+    font-size: 25px;
+}

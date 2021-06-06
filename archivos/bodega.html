@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="../archivos/myStyle.css">
+    <link rel="shortcut icon" href="../multimedia/favicon.png" type="image/x-icon">
+    <title>PANISOFT</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid sectionNav">
+            <div class="w-25  p-3" style="background-color: #ecf19e;">
+                <div class="iconoMenuFijo">
+                    <img src="../multimedia/logo02.png" alt="iconoMenu" width="140px" height="70px">
+                </div>
+            </div>
+            <div class="w-50 p-3 " style="background-color: #ecf19e;">
+                <a class="nav-link active" aria-current="page" href="../index.html">
+                    <h1>PANISOF</h1>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="produccion.html#posiProduccion" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Producción
+                        </a>
+                            <ul class="dropdown-menu fontLi" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item fontLi" href="produccion.html#produPanaderia">Panadería</a></li>
+                                <li><a class="dropdown-item fontLi" href="produccion.html#produBiscocheria">Biscochería</a></li>
+                                <li><a class="dropdown-item fontLi" href="produccion.html#produPasteleria">Patelería</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="administracion.html#posiAdmin" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Administración
+                        </a>
+                            <ul class="dropdown-menu fontLi" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item fontLi" href="administracion.html#admNomina">Nomina</a></li>
+                                <li><a class="dropdown-item fontLi" href="administracion.html#adminGloba">Global</a></li>
+                                <li><a class="dropdown-item fontLi" href="administracion.html#adminGrafica">Graficas</a></li>
+                                <li><a class="dropdown-item fontLi" href="administracion.html#adminCosto">Costos</a></li>
+                                <li><a class="dropdown-item fontLi" href="administracion.html#adminGastos">Gastos</a></li>
+                                <li><a class="dropdown-item fontLi" href="administracion.html#adminHistoria ">Historial</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="contactenos.html#posiCOntacte" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Contactenos
+                        </a>
+                            <ul class="dropdown-menu fontLi" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item fontLi" href="#">Root</a></li>
+                                <li><a class="dropdown-item fontLi" href="#">Correo</a></li>
+                            </ul>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 col-md-2">
+                <!--es para la seccion de noticias e interes-->
+                <button class="btn btn-primary classButton" id="posiProduccion" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Interes</button>
+
+                <div class="offcanvas offcanvas-end" style="background-color: #ecf19e;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Interes</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <section class="sectionInfo">
+                            <div>Cursos</div>
+                            <p>Destinado a investigación mercado</p>
+                            <div>Recetas</div>
+                            <p>Algunas recetas de interes subidas</p>
+                            <div>Tips</div>
+                            <p>Consejos de temperatura y almacenamiento</p>
+                            <div>Noticias</div>
+                            <p>Curiosidades para la panificación</p>
+                        </section>
+                    </div>
+                </div>
+                <!--para el navegador lateral-->
+                <button class="btn btn-primary classButton" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                     Sub Menu
+                </button>
+
+                <div class="offcanvas offcanvas-start" style="background-color: #ecf19e;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Seleccione</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" style="background-color: #ecf19e;">
+                        <div class="dropdown mt-3">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                Sub menu bodega
+                            </button>
+                            <ul class="dropdown-menu fontLi" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item fontLi" href="#proveeBodega">Proveedor</a></li>
+                                <li><a class="dropdown-item fontLi" href="#pedidBodega">Pedidos</a></li>
+                                <li><a class="dropdown-item fontLi" href="#compBodega">Compra</a></li>
+                                <li><a class="dropdown-item fontLi" href="#cosBodega">Costo Bodega</a></li>
+                                <li><a class="dropdown-item fontLi" href="#consuBodega">Consumo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-md-10">
+                <section class="menuGeneral">
+                    <hr>
+                    <article class="conteGeneral" id="proveeBodega">
+                        <h2><strong>Proveedor</strong></h2>
+                        <p> En este sección irían tanto el ingreso de un nuevo proveedor como la selección de presentación individual o en grupo de proveedores, esta ira con datos de fecha de pedido y de entrega.</p>
+                        <img src="../multimedia/proveedor.png" alt="planilla original proveedores">
+                    </article>
+                    <hr>
+                    <article class="conteGeneral" id="pedidBodega">
+                        <h2><strong>Pedidos</strong></h2>
+                        <p>Mediante la selección del proveedor saldrá un listado de las compras a realizar con un consolidado de máximos minimos, para comprar con una estimación según el consumo realizado durante el tiempo que le tarda al proveedor en regresar;
+                            de esta manera se mantienen las existencias para poder funcionar y mejorar descuentos asi como maximizar su funcionalidad.</p>
+                        <img src="../multimedia/pedidoscompra.png" alt="planilla estimado">
+                    </article>
+                    <hr>
+                    <article class="conteGeneral" id="compBodega">
+                        <h2><strong>Compra</strong></h2>
+                        <p>Es una relación de todos los insumos que trae el proveedor para verificar precios con otro proveedor, en esta esta presentación iva y costo promedio asi como costo gramo ya que algunos proveedores prometen mas pero al llevarlo
+                            a costo gramo se ve la diferencia.</p>
+                        <img src="../multimedia/insumosbodega.png" alt="planilla">
+                    </article>
+                    <hr>
+                    <article class="conteGeneral" id="cosBodega">
+                        <h2><strong>Costo</strong></h2>
+                        <p>En este apartado se muestra el costo total de la bodega, dato importante para saber si sus existencias asi como el capital invertido es estable, asi como también sirve para la representación de la administración en el cuadro de
+                            ganancias.
+                        </p>
+                        <img src="../multimedia/costobodega.png" alt="planilla costo bodega">
+                    </article>
+                    <hr>
+                    <article class="conteGeneral" id="consuBodega">
+                        <h2><strong>Consumo</strong></h2>
+                        <p>Representa la visión general por proveedor asi como insumos utilizados, el cuadro cronológico por semanas de su uso; allí se analizan tanto compras como usos, para analizar posibles fugas de la materia prima.</p>
+
+                        <img src="../multimedia/consumobodega.png" alt="planilla cosumo bodega">
+                    </article>
+
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>
+<footer>
+
+    <hr> Creacion <strong>HARBEY BARACALDO</strong> <br>Proyecto final con colaboracion de <br><strong>BIT IBEROAMERICA</strong>
+    <hr>
+
+</footer>
+
+</html>
