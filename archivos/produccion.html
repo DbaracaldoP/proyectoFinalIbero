@@ -72,80 +72,79 @@
 
     <!--cuerpo de trabajo-->
     <div class="container">
-        <div class="row">
-            <div class="col-2 col-md-2">
-                <!--es para la seccion de noticias e interes-->
-                <button class="btn btn-primary classButton" id="posiProduccion" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Interes</button>
 
-                <div class="offcanvas offcanvas-end" style="background-color: #ecf19e;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                    <div class="offcanvas-header">
-                        <h5 id="offcanvasRightLabel">Interes</h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <section class="sectionInfo">
-                            <div>Cursos</div>
-                            <p>Destinado a investigación mercado</p>
-                            <div>Recetas</div>
-                            <p>Algunas recetas de interes subidas</p>
-                            <div>Tips</div>
-                            <p>Consejos de temperatura y almacenamiento</p>
-                            <div>Noticias</div>
-                            <p>Curiosidades para la panificación</p>
-                        </section>
-                    </div>
+        <div class="col-2 col-md-2">
+            <!--es para la seccion de noticias e interes-->
+            <button class="btn btn-primary classButton" id="posiProduccion" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Interes</button>
+
+            <div class="offcanvas offcanvas-end" style="background-color: #ecf19e;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Interes</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <!--para el navegador lateral-->
-                <button class="btn btn-primary classButton" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <div class="offcanvas-body">
+                    <section class="sectionInfo">
+                        <div>Cursos</div>
+                        <p>Destinado a investigación mercado</p>
+                        <div>Recetas</div>
+                        <p>Algunas recetas de interes subidas</p>
+                        <div>Tips</div>
+                        <p>Consejos de temperatura y almacenamiento</p>
+                        <div>Noticias</div>
+                        <p>Curiosidades para la panificación</p>
+                    </section>
+                </div>
+            </div>
+            <!--para el navegador lateral-->
+            <button class="btn btn-primary classButton" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                      Sub Menu
                 </button>
 
-                <div class="offcanvas offcanvas-start" style="background-color: #ecf19e;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Seleccione</h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body" style="background-color: #ecf19e;">
-                        <div class="dropdown mt-3">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+            <div class="offcanvas offcanvas-start" style="background-color: #ecf19e;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Seleccione</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" style="background-color: #ecf19e;">
+                    <div class="dropdown mt-3">
+                        <button class="btn btn-secondary dropdown-toggle clasButtonSubMenu" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
                                 Sub menu producción
                             </button>
-                            <ul class="dropdown-menu fontLi" aria-labelledby="dropdownMenuButton">
-                                <li><a class="dropdown-item fontLi" href="#produPanaderia">Panadería</a></li>
-                                <li><a class="dropdown-item fontLi" href="#produBiscocheria">Biscochería</a></li>
-                                <li><a class="dropdown-item fontLi" href="#produPastelería">Pastelería</a></li>
-                            </ul>
-                        </div>
+                        <ul class="dropdown-menu fontLi" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item fontLi" href="#produPanaderia">Panadería</a></li>
+                            <li><a class="dropdown-item fontLi" href="#produBiscocheria">Biscochería</a></li>
+                            <li><a class="dropdown-item fontLi" href="#produPastelería">Pastelería</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-10 col-md-10">
-                <section class="menuGeneral">
-                    <hr>
-                    <article class="conteGeneral" id="produPanaderia">
-                        <h2><strong>Panadería</strong></h2>
-                        <p>Esta sección será creada para el control de la producción ya sea por mojes o por unidades, si da la primera opción mojes, este le dará el total de ingredientes a usar, y le pedirá como dato final los panes que salieron; la segunda
-                            por unidad, esta le dará el valor exacto según receta para hacer la cantidad requerida por el operario, si embargo se le pedirá un dato final de unidades ya que existen variaciones en la fabricación. </p>
-                        <img src="../multimedia/prodPanaderia.png" alt="planilla produccion panadería">
-                    </article>
-                    <hr>
-                    <article class=" conteGeneral " id="produBiscocheria">
-                        <h2><strong>Biscochería</strong></h2>
-                        <p>A igual que la sección anterior, se solicitara la selección por receta o unidades, además se realiza de este modo un control sobre el trabajo del operario en esta sección ya que muchas veces una forma de evaluar a los operarios
-                            es viendo sus resultados; esta etapa se vera en la sección administración.</p>
-                        <img src="../multimedia/prodBIscocheria.png " alt="planilla biscochería ">
-                    </article>
-                    <hr>
-                    <article class="conteGeneral " id="produPasteleria">
-                        <h2><strong>Pastelería</strong></h2>
-                        <p>Esta sección es compleja ya que la distribución de subproductos muchas veces no salen elaborados el mismo dia y quedan como base para días siguientes, pero como en la sección anterior se podrá ver los resultados del encargado de
-                            esta área, asi como los pedidos que se generan para la decoración y las fechas de entrega junto al diseño.</p>
-                        <img src="../multimedia/prodPasteleria.png " alt="planilla pastelería ">
-                    </article>
-                </section>
-            </div>
-
         </div>
+        <div class="col-10 col-md-10">
+            <section class="menuGeneral">
+                <hr>
+                <article class="conteGeneral" id="produPanaderia">
+                    <h2><strong>Panadería</strong></h2>
+                    <p>Esta sección será creada para el control de la producción ya sea por mojes o por unidades, si da la primera opción mojes, este le dará el total de ingredientes a usar, y le pedirá como dato final los panes que salieron; la segunda
+                        por unidad, esta le dará el valor exacto según receta para hacer la cantidad requerida por el operario, si embargo se le pedirá un dato final de unidades ya que existen variaciones en la fabricación. </p>
+                    <img src="../multimedia/prodPanaderia.png" alt="planilla produccion panadería">
+                </article>
+                <hr>
+                <article class=" conteGeneral " id="produBiscocheria">
+                    <h2><strong>Biscochería</strong></h2>
+                    <p>A igual que la sección anterior, se solicitara la selección por receta o unidades, además se realiza de este modo un control sobre el trabajo del operario en esta sección ya que muchas veces una forma de evaluar a los operarios es
+                        viendo sus resultados; esta etapa se vera en la sección administración.</p>
+                    <img src="../multimedia/prodBIscocheria.png " alt="planilla biscochería ">
+                </article>
+                <hr>
+                <article class="conteGeneral " id="produPasteleria">
+                    <h2><strong>Pastelería</strong></h2>
+                    <p>Esta sección es compleja ya que la distribución de subproductos muchas veces no salen elaborados el mismo dia y quedan como base para días siguientes, pero como en la sección anterior se podrá ver los resultados del encargado de esta
+                        área, asi como los pedidos que se generan para la decoración y las fechas de entrega junto al diseño.</p>
+                    <img src="../multimedia/prodPasteleria.png " alt="planilla pastelería ">
+                </article>
+            </section>
+        </div>
+
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->

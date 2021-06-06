@@ -117,6 +117,14 @@ h2 {
 }
 
 
+/**pagina produccion*/
+
+.clasButtonSubMenu {
+    background-color: #ecf19e;
+    color: black;
+}
+
+
 /*pagina bodega*/
 
 .bodyGeneral {
