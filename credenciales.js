@@ -1,4 +1,4 @@
-/*esta es una purba de contraseña
+/*esta es una prueba de contraseña
 
 
 */
