@@ -1,6 +1,8 @@
 #esta es para ignorar el credenciales.js
 credenciales.js
-
+#esta es para no subir node_modules
+/node_modules
+/paraprobar
 
 # de aqui para bajo es lo que tomo del inicial
 # Prerequisites
