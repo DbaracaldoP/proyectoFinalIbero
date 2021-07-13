@@ -1,6 +1,6 @@
-var express = require('express'); //descarga todo el paquete en una vaariable
+//var express = require('express'); //descarga todo el paquete en una vaariable
 const port = 3000;
-var app = express(); //invoca la funcionalidad de todo el express
+//var app = express(); //invoca la funcionalidad de todo el express
 var bodyParser = require('body-parser');
 const { response } = require('express');
 app.use(bodyParser.json()); //configuracion para decir que soporta fomratos Json en app
@@ -41,4 +41,15 @@ app.get('/paginax/registro/:nombre', function(request, salida) {
     console.log('dentro de rutas registro');
     datos.push({ nombre: request.params.nombre });
     salida.json(datos);
+})
+app.post('/proveedor', function(request, salida) {
+        console.log('dentro de rutas post registro ingreso por archivos de bodega');
+        console.log(request.body);
+        salida.json({ stado: 'OK' });
+    })
+    //esta es para el fomulario de contactos se ejecuta bien
+app.post('/contactenos', function(request, salida) {
+    console.log('dentro de rutas post registro ingreso por archivos de contactenos');
+    console.log(request.body);
+    salida.json({ stado: 'OK' });
 })
