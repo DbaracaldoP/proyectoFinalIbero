@@ -31,7 +31,7 @@ h2 {
 }
 
 .iconoMenuFijo img:hover {
-    width: 120px;
+    width: 110px;
     transition: all 1s;
 }
 
@@ -54,6 +54,7 @@ h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     color: rgb(9, 75, 26);
+    border: 0;
 }
 
 .mainSection {
@@ -228,4 +229,51 @@ footer {
     letter-spacing: 1px;
     color: rgb(15, 37, 19);
     font-size: 25px;
+}
+
+.liCambio {
+    list-style: none;
+}
+
+
+/*formulario*/
+
+.sectionFormulario {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 85%;
+    background-color: #fcfde4;
+    border: 1px rgb(66, 55, 55) solid;
+    border-right: 3px rgb(47, 47, 59) solid;
+}
+
+.classForm {
+    margin: 30px;
+    background-color: #ecf19e;
+}
+
+.containerForm {
+    border: 2px rgb(104, 119, 80) solid;
+    margin: 15px;
+}
+
+.containerForm p {
+    margin-left: 25px;
+}
+
+.texForm {
+    margin-left: 10px;
+}
+
+.buttonform {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: whitesmoke;
+    margin: auto;
+    width: 6%;
+    background-image: radial-gradient(farthest-corner at 45px 45px, #443d3d 0%, #323244 100%);
+    letter-spacing: 1px;
+    border: 3px #ecf19e solid;
 }
