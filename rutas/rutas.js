@@ -47,6 +47,7 @@ app.post('/proveedor', function(request, salida) {
         console.log('dentro de rutas post registro ingreso por archivos de bodega');
         console.log(request.body);
         salida.json({ stado: 'OK' });
+
     })
     //esta es para el fomulario de contactos se ejecuta bien para ingreso usuarios en la opcion contactenos
 app.post('/contactenos', function(request, salida) {
@@ -59,6 +60,7 @@ const UserController = require('../controllers/UserController.js');
 //de esta manera se puede ver el flujo de informacion request y response
 app.post('/create', function(request, response) {
     //se invoca para llamar al controlador y este  al usuario
+    console.log('pase por rutas');
     UserController.create(request, response);
 
 });
