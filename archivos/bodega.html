@@ -13,14 +13,29 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid sectionNav">
-            <div class="w-25  p-3" style="background-color: #ecf19e;">
-                <div class="iconoMenuFijo">
-                    <img src="../multimedia/logo02.png" alt="iconoMenu" width="140px" height="70px">
-                </div>
-            </div>
+            <ul class="liCambio navbar-nav">
+                <li>
+                    <div class="w-25  p-3" style="background-color: #ecf19e;">
+                        <div class="iconoMenuFijo">
+                            <img src="../multimedia/logo02.png" alt="iconoMenu" width="140px" height="70px">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <!--es para la seccion de noticias e interes-->
+                        <button class="btn btn-primary classButton " id="posiProduccion" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Interes</button>
+
+                        <!--para el navegador lateral-->
+                        <button class="btn btn-primary classButton" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            Sub Menu
+                        </button>
+                    </div>
+
+                </li>
+            </ul>
             <div class="w-50 p-3 " style="background-color: #ecf19e;">
                 <a class="nav-link active" aria-current="page" href="../index.html">
                     <h1>PANISOF</h1>
@@ -61,7 +76,7 @@
                         </a>
                             <ul class="dropdown-menu fontLi" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item fontLi disabled" href="#">Root</a></li>
-                                <li><a class="dropdown-item fontLi disabled" href="#">Correo</a></li>
+                                <li><a class="dropdown-item fontLi" href="#">Correo</a></li>
                             </ul>
                         </li>
                 </ul>
@@ -72,8 +87,6 @@
         <div class="row">
             <div class="col-2 col-md-2">
                 <!--es para la seccion de noticias e interes-->
-                <button class="btn btn-primary classButton" id="posiProduccion" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Interes</button>
-
                 <div class="offcanvas offcanvas-end" style="background-color: #ecf19e;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                     <div class="offcanvas-header">
                         <h5 id="offcanvasRightLabel">Interes</h5>
@@ -93,10 +106,6 @@
                     </div>
                 </div>
                 <!--para el navegador lateral-->
-                <button class="btn btn-primary classButton" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                     Sub Menu
-                </button>
-
                 <div class="offcanvas offcanvas-start" style="background-color: #ecf19e;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasExampleLabel">Seleccione</h5>
@@ -105,7 +114,7 @@
                     <div class="offcanvas-body" style="background-color: #ecf19e;">
                         <div class="dropdown mt-3">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                Sub menu bodega
+                                Sub menu
                             </button>
                             <ul class="dropdown-menu fontLi" aria-labelledby="dropdownMenuButton">
                                 <li><a class="dropdown-item fontLi" href="#proveeBodega">Proveedor</a></li>
@@ -124,42 +133,58 @@
                     <article class="conteGeneral" id="proveeBodega">
                         <h2><strong>Proveedor</strong></h2>
                         <p> En este sección irían tanto el ingreso de un nuevo proveedor como la selección de presentación individual o en grupo de proveedores, esta ira con datos de fecha de pedido y de entrega.</p>
-                        <img src="../multimedia/proveedor.png" alt="planilla original proveedores">
-                    </article>
-                    <hr>
-                    <article class="conteGeneral" id="pedidBodega">
-                        <h2><strong>Pedidos</strong></h2>
-                        <p>Mediante la selección del proveedor saldrá un listado de las compras a realizar con un consolidado de máximos minimos, para comprar con una estimación según el consumo realizado durante el tiempo que le tarda al proveedor en regresar;
-                            de esta manera se mantienen las existencias para poder funcionar y mejorar descuentos asi como maximizar su funcionalidad.</p>
-                        <img src="../multimedia/pedidoscompra.png" alt="planilla estimado">
-                    </article>
-                    <hr>
-                    <article class="conteGeneral" id="compBodega">
-                        <h2><strong>Compra</strong></h2>
-                        <p>Es una relación de todos los insumos que trae el proveedor para verificar precios con otro proveedor, en esta esta presentación iva y costo promedio asi como costo gramo ya que algunos proveedores prometen mas pero al llevarlo
-                            a costo gramo se ve la diferencia.</p>
-                        <img src="../multimedia/insumosbodega.png" alt="planilla">
-                    </article>
-                    <hr>
-                    <article class="conteGeneral" id="cosBodega">
-                        <h2><strong>Costo</strong></h2>
-                        <p>En este apartado se muestra el costo total de la bodega, dato importante para saber si sus existencias asi como el capital invertido es estable, asi como también sirve para la representación de la administración en el cuadro de
-                            ganancias.
-                        </p>
-                        <img src="../multimedia/costobodega.png" alt="planilla costo bodega">
-                    </article>
-                    <hr>
-                    <article class="conteGeneral" id="consuBodega">
-                        <h2><strong>Consumo</strong></h2>
-                        <p>Representa la visión general por proveedor asi como insumos utilizados, el cuadro cronológico por semanas de su uso; allí se analizan tanto compras como usos, para analizar posibles fugas de la materia prima.</p>
-
-                        <img src="../multimedia/consumobodega.png" alt="planilla cosumo bodega">
-                    </article>
-
-                </section>
+                        <form action="/proveedor" method="POST" class="classForm">
+                            <label style="margin-left: 10px;" for="nombre">Nombre Empresa</label>
+                            <input type="text" name="nombreEmpr" placeholder="Ingrese elnombre empresa Proveedor">
+                            <br>
+                            <label style="margin-left: 10px;" for="nombre">Nombre vendedor</label>
+                            <input type="text" name="nombreVen" placeholder="Ingrese el nombre vendedor">
+                            <br>
+                            <label style="margin-left: 10px;" for="nombre">Dia de ruta</label>
+                            <input type="text" name="diaRt" placeholder="Ingrese los dias de ruta">
+                            <br>
+                            <label style="margin-left: 10px;" for="nombre">numero contacto</label>
+                            <input type="text" name="telefono" placeholder="telefono">
+                            <br>
+                            <div class="buttonform"></div>
+                            <button type="submit">Enviar</button>
             </div>
+            </form>
+            <img src="../multimedia/proveedor.png" alt="planilla original proveedores">
+            </article>
+            <hr>
+            <article class="conteGeneral" id="pedidBodega">
+                <h2><strong>Pedidos</strong></h2>
+                <p>Mediante la selección del proveedor saldrá un listado de las compras a realizar con un consolidado de máximos minimos, para comprar con una estimación según el consumo realizado durante el tiempo que le tarda al proveedor en regresar;
+                    de esta manera se mantienen las existencias para poder funcionar y mejorar descuentos asi como maximizar su funcionalidad.</p>
+                <img src="../multimedia/pedidoscompra.png" alt="planilla estimado">
+            </article>
+            <hr>
+            <article class="conteGeneral" id="compBodega">
+                <h2><strong>Compra</strong></h2>
+                <p>Es una relación de todos los insumos que trae el proveedor para verificar precios con otro proveedor, en esta esta presentación iva y costo promedio asi como costo gramo ya que algunos proveedores prometen mas pero al llevarlo a costo
+                    gramo se ve la diferencia.</p>
+                <img src="../multimedia/insumosbodega.png" alt="planilla">
+            </article>
+            <hr>
+            <article class="conteGeneral" id="cosBodega">
+                <h2><strong>Costo</strong></h2>
+                <p>En este apartado se muestra el costo total de la bodega, dato importante para saber si sus existencias asi como el capital invertido es estable, asi como también sirve para la representación de la administración en el cuadro de ganancias.
+                </p>
+                <img src="../multimedia/costobodega.png" alt="planilla costo bodega">
+            </article>
+            <hr>
+            <article class="conteGeneral" id="consuBodega">
+                <h2><strong>Consumo</strong></h2>
+                <p>Representa la visión general por proveedor asi como insumos utilizados, el cuadro cronológico por semanas de su uso; allí se analizan tanto compras como usos, para analizar posibles fugas de la materia prima.</p>
 
+                <img src="../multimedia/consumobodega.png" alt="planilla cosumo bodega">
+            </article>
+
+            </section>
         </div>
+
+    </div>
     </div>
 
 

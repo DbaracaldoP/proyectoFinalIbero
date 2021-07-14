@@ -13,14 +13,29 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid sectionNav">
-            <div class="w-25  p-3" style="background-color: #ecf19e;">
-                <div class="iconoMenuFijo">
-                    <img src="../multimedia/logo02.png" alt="iconoMenu" width="140px" height="70px">
-                </div>
-            </div>
+            <ul class="liCambio navbar-nav">
+                <li>
+                    <div class="w-25  p-3" style="background-color: #ecf19e;">
+                        <div class="iconoMenuFijo">
+                            <img src="../multimedia/logo02.png" alt="iconoMenu" width="140px" height="70px">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <!--es para la seccion de noticias e interes-->
+                        <button class="btn btn-primary classButton " id="posiProduccion" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Interes</button>
+
+                        <!--para el navegador lateral-->
+                        <button class="btn btn-primary classButton" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            Sub Menu
+                        </button>
+                    </div>
+
+                </li>
+            </ul>
             <div class="w-50 p-3 " style="background-color: #ecf19e;">
                 <a class="nav-link active" aria-current="page" href="../index.html">
                     <h1>PANISOF</h1>
@@ -69,31 +84,100 @@
             </div>
         </div>
     </nav>
-    <!--es para la seccion de noticias e interes-->
-    <button class="btn btn-primary classButton" id="posiCOntacte" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Interes</button>
+    <div class="container">
 
-    <div class="offcanvas offcanvas-end" style="background-color: #ecf19e;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-            <h5 id="offcanvasRightLabel">Interes</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <section class="sectionInfo">
-                <div>Cursos</div>
-                <p>Destinado a investigación mercado</p>
-                <div>Recetas</div>
-                <p>Algunas recetas de interes subidas</p>
-                <div>Tips</div>
-                <p>Consejos de temperatura y almacenamiento</p>
-                <div>Noticias</div>
-                <p>Curiosidades para la panificación</p>
-            </section>
+        <div class="col-2 col-md-2">
+            <!--es para la seccion de noticias e interes-->
+            <div class="offcanvas offcanvas-end" style="background-color: #ecf19e;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Interes</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <section class="sectionInfo">
+                        <div>Cursos</div>
+                        <p>Destinado a investigación mercado</p>
+                        <div>Recetas</div>
+                        <p>Algunas recetas de interes subidas</p>
+                        <div>Tips</div>
+                        <p>Consejos de temperatura y almacenamiento</p>
+                        <div>Noticias</div>
+                        <p>Curiosidades para la panificación</p>
+                    </section>
+                </div>
+            </div>
+            <!--para el navegador lateral-->
+            <div class="offcanvas offcanvas-start" style="background-color: #ecf19e;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Seleccione </h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" style="background-color: #ecf19e;">
+                    <div class="dropdown mt-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                Sub menu
+                            </button>
+                        <ul class="dropdown-menu fontLi" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item fontLi" href="">Root</a></li>
+                            <li><a class="dropdown-item fontLi" href="">Contactenos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <h2>EN CONSTRUCCION</h2>
-
-
-
+    <section class="sectionFormulario">
+        <h2>
+            Contactenos
+        </h2>
+        <form action="/contactenos" method="post" class="classForm">
+            <p class="texForm">Lo invitamos a llenar los siguientes datos:</p>
+            <div class="containerForm">
+                <label style="margin-left: 5px;" for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <label style="margin-left: 5px;" for="pApellido">Apellido</label>
+                <input type="text" id="pApellido" name="apellido" placeholder="Primer apellido" required>
+                <label style="margin-left: 5px;" for="sApellido">Apellido</label>
+                <input type="text" id="sApellido" name="apellido" placeholder="Segundo apellido" required>
+                <label style="margin-left: 5px;" for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            <p class="texForm">Datos adicionales:</p>
+            <div class="containerForm">
+                <label for="fNacimiento">Seleccione la fecha de nacimiento</label>
+                <input type="date" name="fNacimiento" id="fNacimiento">
+                <br>
+                <p>Seleccione el sexo</p>
+                <label for="mujer" style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  margin-left: 10px;">Mujer</label>
+                <input type="radio" id="mujer" name="genero" style="margin-left: 10px;">
+                <label for="hombre" style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  margin-left: 10px;">Hombre</label>
+                <input type="radio" id="hombre" name="genero" style="margin-left: 10px;">
+            </div>
+            <p class="texForm">Tu opinion cuenta:</p>
+            <div class="containerForm">
+                <label for="calif">Como califica nuestro trabajo</label>
+                <select name="frecuencia" id="calif" class="sectionOption">
+                    <option>-- - --</option>
+                    <option>Bueno</option>
+                    <option>Regular</option>
+                    <option>Lo recomendaría</option>
+                    <option>No lo recomendaría</option>
+                </select>
+            </div>
+            <p class="texForm">Que te gusta de esta selección:</p>
+            <div class="containerForm">
+                <label style="margin-left: 20px;" for="opcion1">Recetas </label>
+                <input type="checkbox" id="opcion1" name="piano">
+                <label style="margin-left: 20px;" for="opcion2">Consejos varios</label>
+                <input type="checkbox" id="opcion2" name="guitarra">
+                <label style="margin-left: 20px;" for="opcion3">Manejo de costos</label>
+                <input type="checkbox" id="opcion3" name="flauta">
+            </div>
+            <div class="buttonform">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </section>
 
 
 
