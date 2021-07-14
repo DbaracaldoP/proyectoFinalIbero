@@ -38,18 +38,27 @@ app.post('/paginax', function(req, resp) {
 
 var datos = [];
 app.get('/paginax/registro/:nombre', function(request, salida) {
-    console.log('dentro de rutas registro');
-    datos.push({ nombre: request.params.nombre });
-    salida.json(datos);
-})
+        console.log('dentro de rutas registro');
+        datos.push({ nombre: request.params.nombre });
+        salida.json(datos);
+    })
+    //este¿a es para la pagina proveedor ingreso proveedor
 app.post('/proveedor', function(request, salida) {
         console.log('dentro de rutas post registro ingreso por archivos de bodega');
         console.log(request.body);
         salida.json({ stado: 'OK' });
     })
-    //esta es para el fomulario de contactos se ejecuta bien
+    //esta es para el fomulario de contactos se ejecuta bien para ingreso usuarios en la opcion contactenos
 app.post('/contactenos', function(request, salida) {
-    console.log('dentro de rutas post registro ingreso por archivos de contactenos');
-    console.log(request.body);
-    salida.json({ stado: 'OK' });
-})
+        console.log('dentro de rutas post registro ingreso por archivos de contactenos');
+        console.log(request.body);
+        salida.json({ stado: 'OK' });
+    })
+    //appi para usar con mongo
+const UserController = require('../controllers/UserController.js');
+//de esta manera se puede ver el flujo de informacion request y response
+app.post('/create', function(request, response) {
+    //se invoca para llamar al controlador y este  al usuario
+    UserController.create(request, response);
+
+});
