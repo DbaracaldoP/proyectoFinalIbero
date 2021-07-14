@@ -7,7 +7,17 @@ var ProveedorSchema = new Schema({
     diaRt: String,
     telefono: Number
 }); //para realizar el modelo de datos para la base
-module.export = mongoose.model('user', ProveedorSchema);
+var contactenosSchema = new Schema({
+    nombre: String,
+    pApellido: String,
+    sApellido: String,
+    email: String,
+    fNacimiento: Number,
+    genero: String,
+    frecuencia: String,
+}); //para realizar el modelo de datos para la base
+module.exports = mongoose.model('proveedor', ProveedorSchema);
+module.exports = mongoose.model('contactenos', contactenosSchema);
 //2. paso es crear un controlador, para que administro las rutas y el modelo vista controlador MVC
 //se crea en la carpeta controles
 
