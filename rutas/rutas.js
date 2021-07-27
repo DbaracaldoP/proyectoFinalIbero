@@ -6,6 +6,8 @@ const { response } = require('express');
 app.use(bodyParser.json()); //configuracion para decir que soporta fomratos Json en app
 app.use(bodyParser.urlencoded({ extended: true })); //que viene extendido de la codificacion de la url
 console.log('dentro rutas...');
+const UserController = require('../controllers/UserController.js');     //esta appi es para mongo
+
 //segundo paso manejo del post y el get, el post maneja los datos ocultos no vistos por el cliente y el get maneja los datos por al url http://google/13/jhon/6555  las dos primeras son del dominio y las otras son parametros
 //el primer parametro de la funcion es un oido y el otro es una respuesta
 app.get('/paginax', function(request, response) {
@@ -46,20 +48,21 @@ app.get('/paginax/registro/:nombre', function(request, salida) {
 app.post('/proveedor', function(request, salida) {
         console.log('dentro de rutas post registro ingreso por archivos de bodega');
         console.log(request.body);
-        salida.json({ stado: 'OK' });
-
+        salida.json({ stado: 'OK proveedor' });
+        UserController.proveedor(request, salida);
     })
     //esta es para el fomulario de contactos se ejecuta bien para ingreso usuarios en la opcion contactenos
 app.post('/contactenos', function(request, salida) {
         console.log('dentro de rutas post registro ingreso por archivos de contactenos');
         console.log(request.body);
-        salida.json({ stado: 'OK' });
+        salida.json({ stado: 'OK contactenos' });
+        UserController.contactenos(request, salida);
     })
     //appi para usar con mongo
-const UserController = require('../controllers/UserController.js');
 //de esta manera se puede ver el flujo de informacion request y response
 app.post('/create', function(request, response) {
-    //se invoca para llamar al controlador y este  al usuario
+    //se invoca para llamar al Usercontrolador y este  al usuario userjs y este lo guarda en mongo
+    //lo primero es importar los datos linea 9 de este codigo
     console.log('pase por rutas');
     UserController.create(request, response);
 
