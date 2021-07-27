@@ -7,28 +7,9 @@ var UserSchema= new Schema({
     edad: String,
     telefono: String
 });
-var ProveedorSchema = new Schema({
-    nombre: String,
-    nombreVen: String,
-    diaRt: String,
-    telefono: String
-}); //para realizar el modelo de datos para la base
-
-var contactenosSchema = new Schema({
-    nombre: String,
-    pApellido: String,
-    sApellido: String,
-    email: String,
-    fNacimiento: String,
-    genero: String,
-    frecuencia: String
-}); //para realizar el modelo de datos para la base
-module.exports = mongoose.model('proveedor', ProveedorSchema);
-module.exports = mongoose.model('contactenos', contactenosSchema);
-module.exports = mongoose.model('user',UserSchema);   
+// me toco dejar este elemento solo ya que no se los otros me generan problema
+module.exports = mongoose.model('user',UserSchema);   //aqui es donde se nombra la colleccion d ela base de datos PanisofMean y le agregan una s al final
 //2. paso es crear un controlador, para que administro las rutas y el modelo vista controlador MVC
 //se crea en la carpeta controles
-
-
 //el funcionamiento es modelo controlador rutas...
 //como biene biene del index, pasa ruta, llama controlador, llama modelo y este con la base de datos
