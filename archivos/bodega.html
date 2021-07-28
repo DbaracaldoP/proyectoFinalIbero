@@ -117,11 +117,13 @@
                                 Sub menu
                             </button>
                             <ul class="dropdown-menu fontLi" aria-labelledby="dropdownMenuButton">
-                                <li><a class="dropdown-item fontLi" href="#proveeBodega">Proveedor</a></li>
-                                <li><a class="dropdown-item fontLi" href="#pedidBodega">Pedidos</a></li>
+                                <li><a class="dropdown-item fontLi" href="#proveeBodega">Proveedor nuevo</a></li>
+                                <li><a class="dropdown-item fontLi" href="#proveeBodega">Proveedor modificar</a></li>
+                                <li><a class="dropdown-item fontLi" href="#proveeBodega">Proveedor borrar</a></li>
+                               <!-- <li><a class="dropdown-item fontLi" href="#pedidBodega">Pedidos</a></li>
                                 <li><a class="dropdown-item fontLi" href="#compBodega">Compra</a></li>
                                 <li><a class="dropdown-item fontLi" href="#cosBodega">Costo Bodega</a></li>
-                                <li><a class="dropdown-item fontLi" href="#consuBodega">Consumo</a></li>
+                                <li><a class="dropdown-item fontLi" href="#consuBodega">Consumo</a></li>-->
                             </ul>
                         </div>
                     </div>
@@ -131,7 +133,7 @@
                 <section class="menuGeneral">
                     <hr>
                     <article class="conteGeneral" id="proveeBodega">
-                        <h2><strong>Proveedor</strong></h2>
+                        <h2><strong>Proveedor nuevo</strong></h2>
                         <p> En este sección irían tanto el ingreso de un nuevo proveedor como la selección de presentación individual o en grupo de proveedores, esta ira con datos de fecha de pedido y de entrega.</p>
                         <form action="/proveedor" method="POST" class="classForm">
                             <label style="margin-left: 10px;" for="nombre">Nombre Empresa</label>
@@ -148,12 +150,55 @@
                             <br>
                             <div class="buttonform"></div>
                             <button type="submit">Enviar</button>
-            </div>
-            </form>
-            <img src="../multimedia/proveedor.png" alt="planilla original proveedores">
-            </article>
-            <hr>
-            <article class="conteGeneral" id="pedidBodega">
+                            </div>
+                        </form>                   
+                    </article>
+                    <hr>
+                    <article class="conteGeneral" id="proveeBodega">
+                        <h2><strong>Proveedor modificar</strong></h2>
+                        <p> En este sección irían tanto el ingreso de un nuevo proveedor como la selección de presentación individual o en grupo de proveedores, esta ira con datos de fecha de pedido y de entrega.</p>
+                        <form action="/actualizarProveedor" method="POST" class="classForm">
+                            <label style="margin-left: 10px;" for="nombre">Nombre Empresa</label>
+                            <input type="text" name="nombreEmpr" placeholder="Ingrese elnombre empresa Proveedor">
+                            <br>
+                            <label style="margin-left: 10px;" for="nombre">Nombre vendedor</label>
+                            <input type="text" name="nombreVen" placeholder="Ingrese el nombre vendedor">
+                            <br>
+                            <label style="margin-left: 10px;" for="nombre">Dia de ruta</label>
+                            <input type="text" name="diaRt" placeholder="Ingrese los dias de ruta">
+                            <br>
+                            <label style="margin-left: 10px;" for="nombre">numero contacto</label>
+                            <input type="text" name="telefono" placeholder="telefono">
+                            <br>
+                            <div class="buttonform"></div>
+                            <button type="submit">Enviar</button>
+                            </div>
+                        </form>                   
+                    </article>
+                    <hr>
+                    <article class="conteGeneral" id="proveeBodega">
+                        <h2><strong>Proveedor borrar</strong></h2>
+                        <p> En este sección irían tanto el ingreso de un nuevo proveedor como la selección de presentación individual o en grupo de proveedores, esta ira con datos de fecha de pedido y de entrega.</p>
+                        <form action="/proveedor" method="POST" class="classForm">
+                            <label style="margin-left: 10px;" for="nombre">Nombre Empresa</label>
+                            <input type="text" name="nombreEmpr" placeholder="Ingrese elnombre empresa Proveedor">
+                            <br>
+                            <label style="margin-left: 10px;" for="nombre">Nombre vendedor</label>
+                            <input type="text" name="nombreVen" placeholder="Ingrese el nombre vendedor">
+                            <br>
+                            <label style="margin-left: 10px;" for="nombre">Dia de ruta</label>
+                            <input type="text" name="diaRt" placeholder="Ingrese los dias de ruta">
+                            <br>
+                            <label style="margin-left: 10px;" for="nombre">numero contacto</label>
+                            <input type="text" name="telefono" placeholder="telefono">
+                            <br>
+                            <div class="buttonform"></div>
+                            <button type="submit">Enviar</button>
+                            </div>
+                        </form>                   
+                    </article>
+                     <!-- <img src="../multimedia/proveedor.png" alt="planilla original proveedores">-->
+                    <hr><!--
                 <h2><strong>Pedidos</strong></h2>
                 <p>Mediante la selección del proveedor saldrá un listado de las compras a realizar con un consolidado de máximos minimos, para comprar con una estimación según el consumo realizado durante el tiempo que le tarda al proveedor en regresar;
                     de esta manera se mantienen las existencias para poder funcionar y mejorar descuentos asi como maximizar su funcionalidad.</p>
@@ -180,7 +225,7 @@
 
                 <img src="../multimedia/consumobodega.png" alt="planilla cosumo bodega">
             </article>
-
+                -->
             </section>
         </div>
 

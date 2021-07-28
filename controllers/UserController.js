@@ -90,6 +90,21 @@ function updateProveedor(request,response){
         }
     })
 }
+function deleteProveedor(request,response){
+    console.log("dentro de deleteUsuario "); 
+    var idProv =request.body.idProv; 
+    //console.log(idUser)  
+    //response.json({mensaje:"ok dentro updateUsuario"}); //segundo paso crar la ruta    
+    ProveedorN.findByIdAndDelete(idProv,(error, userUpdate) => {
+        if (error) {
+            response.status(500).send({ mensaje: "se presento un error en la elilminacion..." }); //manejo errores en basese de datos
+            console.log(error);
+        } else {           
+            response.status(200).send({ mensaje: "Proveedor borrado..."});  
+            console.log("Proveedor borrado ",userUpdate);          
+        }
+    })
+}
 function contactenos(request, response) {
     //se capturan los datos, se verifican que lleguen antes de enviar a la base de datos
     console.log('dentro de contactenosUserController ');
@@ -130,6 +145,20 @@ function updateContactenos(request,response){
         }
     })
 }
+function deleteContacto(request,response){
+    console.log("dentro de updateProveedor ");
+    var idUser = request.body.idUser;
+   
+    ContactenosN.findByIdAndDelete(idCont,(error, contUpdate) => {
+        if (error) {
+            //response.status(500).send({ mensaje: "se presento un error en la insercion..." }); //manejo errores en basese de datos
+            console.log(error);
+        } else {           
+            //response.status(200).send({ mensaje: "proveedor actualizado..."});    //genera conflicto el json con los console no
+            console.log("contacto Borrado ",contUpdate);          
+        }
+    })
+}
 module.exports = {
         create,
         proveedor,
@@ -137,6 +166,9 @@ module.exports = {
         updateUsuario,
         deleteUsuario,
         updateProveedor,
-        updateContactenos        
+        deleteProveedor,
+        updateContactenos,
+        deleteContacto        
     }
     // se maneja ahora el llamado desde rutas
+//28-07-21

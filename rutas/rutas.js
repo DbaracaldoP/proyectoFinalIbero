@@ -20,13 +20,11 @@ app.get('/paginax/suma/:valor1/:valor2/', function(request, response) {
     var suma = parseInt(request.params.valor1) + parseInt(request.params.valor2)
     response.send('hola mundo desde la app con otro dato hora 1:46 pm suma: ' + suma);
 });
-
 app.get('/paginax/resta/:valor1/:valor2', function(request, response) {
     console.log('dentro de rutas resta ');
     var resta = parseInt(request.params.valor1) - parseInt(request.params.valor2)
     response.send('hola mundo desde la app con otro dato hora 1:46 pm resta: ' + resta);
 });
-
 //para hacer un metodo podo post se requiere la libreria bodyparser
 app.post('/paginax', function(req, resp) {
     console.log('dentro post');
@@ -37,7 +35,6 @@ app.post('/paginax', function(req, resp) {
     } else
         resp.json({ status: true });
 });
-
 var datos = [];
 app.get('/paginax/registro/:nombre', function(request, salida) {
         console.log('dentro de rutas registro');
@@ -50,14 +47,30 @@ app.post('/proveedor', function(request, salida) {
         console.log(request.body);
         //salida.json({ stado: 'OK proveedor' });//este era el conflicto 27-07-2021
         UserController.proveedor(request, salida);
-    })
+});    
+app.post('/actualizarProveedor', function(request, response) {
+    console.log('pase por rutas en actualizar\n');
+    UserController.updateProveedor(request, response);
+});
+app.post('/borrarProveedor', function(request, response) {
+    console.log('pase por rutas en actualizar\n');
+    UserController.deleteProveedor(request, response);
+});
     //esta es para el fomulario de contactos se ejecuta bien para ingreso usuarios en la opcion contactenos
 app.post('/contactenos', function(request, salida) {
         console.log('dentro de rutas post registro ingreso por archivos de contactenos');
         console.log(request.body);
         //salida.json({ stado: 'OK contactenos' }); //este era el conflicto para el ingreso
         UserController.contactenos(request, salida);
-    })
+});
+app.post('/actualizarContacto', function(request, response) {
+    console.log('pase por rutas en actualizar\n');
+    UserController.updateContactenos(request, response);
+});
+app.post('/borrarContacto', function(request, response) {
+    console.log('pase por rutas en actualizar\n');
+    UserController.deleteContacto(request, response);
+});
     //appi para usar con mongo
 //de esta manera se puede ver el flujo de informacion request y response
 app.post('/create', function(request, response) {
@@ -69,14 +82,6 @@ app.post('/create', function(request, response) {
 app.post('/actualizarUsuario', function(request, response) {
     console.log('pase por rutas en actualizar\n');
     UserController.updateUsuario(request, response);
-});
-app.post('/actualizarProveedor', function(request, response) {
-    console.log('pase por rutas en actualizar\n');
-    UserController.updateProveedor(request, response);
-});
-app.post('/actualizarContacto', function(request, response) {
-    console.log('pase por rutas en actualizar\n');
-    UserController.updateContactenos(request, response);
 });
 app.post('/borrarUsuario', function(request, response) {
     console.log('pase por rutas en actualizar\n');
