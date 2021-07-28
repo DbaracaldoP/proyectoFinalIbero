@@ -1,13 +1,12 @@
-  
-const  mangosta  =  require ( 'mangosta' )  // importando
-const  Esquema  =  mangosta . Esquema ;  // crear un esquema de datos
-var  contactenosSchema  =  new  Schema ( {
-    nombre : String ,
-    pAmplio : Cadena ,
-    sAónimo : String ,
-    correo electrónico : String ,
-    fNacimiento : String ,
-    genero : String ,
-    frecuencia : String
-} ) ;  // para realizar el modelo de datos para la base
-módulo . exportaciones  =  mangosta . modelo ( 'contactenos' , contactenosSchema ) ;
+const mongoose = require('mongoose') //importando 
+const Schema = mongoose.Schema; //crear un esquema de datos
+var contactenosSchema = new Schema({
+    nombre: String,
+    pApellido: String,
+    sApellido: String,
+    email: String,
+    fNacimiento: String,
+    genero: String,
+    frecuencia: String
+}); //para realizar el modelo de datos para la base
+module.exports = mongoose.model('contactenos',contactenosSchema);

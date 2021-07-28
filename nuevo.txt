@@ -1,1 +1,4 @@
 la idea es comfirmar el uso de github escritorio ya qeu vscode y sourcetree geenro con <i class="fas fa-helicopter    "></i>
+esta es para ver si esta funcinando la coneccion
+con github 
+es 26-07-21 despues de haver reinstalado el ofice
