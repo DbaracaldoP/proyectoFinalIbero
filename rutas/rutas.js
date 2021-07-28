@@ -65,5 +65,20 @@ app.post('/create', function(request, response) {
     //lo primero es importar los datos linea 9 de este codigo
     console.log('pase por rutas');
     UserController.create(request, response);
-
+});
+app.post('/actualizarUsuario', function(request, response) {
+    console.log('pase por rutas en actualizar\n');
+    UserController.updateUsuario(request, response);
+});
+app.post('/actualizarProveedor', function(request, response) {
+    console.log('pase por rutas en actualizar\n');
+    UserController.updateProveedor(request, response);
+});
+app.post('/actualizarContacto', function(request, response) {
+    console.log('pase por rutas en actualizar\n');
+    UserController.updateContactenos(request, response);
+});
+app.post('/borrarUsuario', function(request, response) {
+    console.log('pase por rutas en actualizar\n');
+    UserController.deleteUsuario(request, response);
 });

@@ -4,6 +4,6 @@ var ProveedorSchema = new Schema({
     nombreEmpr: String,
     nombreVen: String,
     diaRt: String,
-    telefono: String
+    telefono: Number
 }); //para realizar el modelo de datos para la base
 module.exports = mongoose.model('proveedor',ProveedorSchema);

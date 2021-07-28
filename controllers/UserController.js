@@ -20,12 +20,44 @@ function create(request,response){
         }
     })
 }
+function updateUsuario(request,response){
+    console.log("dentro de updateUsuario ");
+    var params = request.body;
+    //console.log(params);
+    var idUser =params.idUser; 
+    //console.log(idUser)  
+    //response.json({mensaje:"ok dentro updateUsuario"}); //segundo paso crar la ruta
+    UserN.findByIdAndUpdate(idUser,params,(error, userUpdate) => {
+        if (error) {
+            response.status(500).send({ mensaje: "se presento un error en la insercion..." }); //manejo errores en basese de datos
+            console.log(error);
+        } else {           
+            response.status(200).send({ mensaje: "usuario actualizado..."});  
+            console.log("usuario modificado ",userUpdate);          
+        }
+    })
+}
+function deleteUsuario(request,response){
+    console.log("dentro de deleteUsuario "); 
+    var idUser =request.body.idUser; 
+    //console.log(idUser)  
+    //response.json({mensaje:"ok dentro updateUsuario"}); //segundo paso crar la ruta    
+    UserN.findByIdAndDelete(idUser,(error, userUpdate) => {
+        if (error) {
+            response.status(500).send({ mensaje: "se presento un error en la elilminacion..." }); //manejo errores en basese de datos
+            console.log(error);
+        } else {           
+            response.status(200).send({ mensaje: "usuario borrado..."});  
+            console.log("usuario borrado ",userUpdate);          
+        }
+    })
+}
 
 function proveedor(request, response) {
     //se capturan los datos, se verifican que lleguen antes de enviar a la base de datos
     console.log('dentro de proveedorUserController ');
     var params = request.body;
-    console.log(params);
+    //console.log(params);
     //se realiza la respuesta
     //response.json({ status: true, mensaje: "si llegaron los datos" });
     var proveedor = new ProveedorN(); //crear instancia 
@@ -41,7 +73,23 @@ function proveedor(request, response) {
         }
     })
 }
-
+function updateProveedor(request,response){
+    console.log("dentro de updateProveedor ");
+    var params = request.body;
+    console.log(params);
+    var idProv =params.idProv; 
+    console.log(idProv)  
+    response.json({mensaje:"ok dentro updateUsuario"}); //segundo paso crar la ruta
+    ProveedorN.findByIdAndUpdate(idProv,params,(error, provUpdate) => {
+        if (error) {
+            //response.status(500).send({ mensaje: "se presento un error en la insercion..." }); //manejo errores en basese de datos
+            console.log(error);
+        } else {           
+            //response.status(200).send({ mensaje: "proveedor actualizado..."});    //genera conflicto el json con los console no
+            console.log("proveedor modificado ",provUpdate);          
+        }
+    })
+}
 function contactenos(request, response) {
     //se capturan los datos, se verifican que lleguen antes de enviar a la base de datos
     console.log('dentro de contactenosUserController ');
@@ -65,10 +113,30 @@ function contactenos(request, response) {
         }
     })
 }
+function updateContactenos(request,response){
+    console.log("dentro de updateProveedor ");
+    var params = request.body;
+    console.log(params);
+    var idCont =params.idCont; 
+    console.log(idCont)  
+    response.json({mensaje:"ok dentro updateUsuario"}); //segundo paso crar la ruta
+    ContactenosN.findByIdAndUpdate(idCont,params,(error, contUpdate) => {
+        if (error) {
+            //response.status(500).send({ mensaje: "se presento un error en la insercion..." }); //manejo errores en basese de datos
+            console.log(error);
+        } else {           
+            //response.status(200).send({ mensaje: "proveedor actualizado..."});    //genera conflicto el json con los console no
+            console.log("contacto modificado ",contUpdate);          
+        }
+    })
+}
 module.exports = {
         create,
         proveedor,
-        contactenos
-        
+        contactenos,
+        updateUsuario,
+        deleteUsuario,
+        updateProveedor,
+        updateContactenos        
     }
     // se maneja ahora el llamado desde rutas
