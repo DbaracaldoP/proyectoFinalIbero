@@ -14,6 +14,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/panisofMean', { useNewUrlParser: tru
 })
 app.use('/', express.static(__dirname + '/')) //me deja el index desde la raiz sin mostrar rutas
     //este es para levantar el servidor
-    app.listen(port, function() {       //este es el servidor de expres
-        console.log('servidor en funcinamiento puerto dentro de apps de experss  ' + port)
-    });
+app.listen(port, function() {       //este es el servidor de expres
+    console.log('servidor en funcinamiento puerto dentro de apps de experss  ' + port)
+});
