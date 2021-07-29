@@ -5,3 +5,64 @@ es 26-07-21 despues de haver reinstalado el ofice
 
 consultar para ver luego
 https://www.youtube.com/watch?v=X2ZiG7Q5Pb8&ab_channel=render2web
+https://www.youtube.com/watch?v=V0Oyk7Qjk1k&ab_channel=Developero
+https://www.youtube.com/watch?v=lgwNcl-dXZE&ab_channel=Developero
+picando codigo
+https://www.youtube.com/channel/UCT_KP2Z8ShMG6gCldnDrerA
+https://www.youtube.com/watch?v=cK4AyhbBhQw&ab_channel=AprendeWeb
+
+
+
+
+codigo para el correcto envio de datos del contacto
+
+    var post = {
+        nombre:request.body.nombre,
+        asunto:request.body.asunto,
+        email:request.body.email,
+        telefono:request.body.telefono,
+        descripcion:request.body.descripcion
+    }
+
+ 
+
+
+    const nodemailer = require('nodemailer');
+
+ 
+
+    let transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 587,
+        secure: false,
+        requireTLS: true,
+        auth: {
+            user: 'pruebasprogramacion123@gmail.com',
+            pass: 'John123456789'
+        }
+    });
+
+ 
+
+    let mailOptions = {
+        from: 'pruebasprogramacion123@gmail.com',
+        to: 'johnescastiblanco@gmail.com',
+        subject: post.asunto,
+          html: "<b style='color:blue'>Hola mi nombre es: "+ post.nombre +" mi telefono es: "+ post.telefono +" mi correo es: "+ post.email +" queria comentanterte que: "+ post.descripcion +"</b>", // html body
+    };
+
+ 
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            
+            return console.log(error.message);
+            response.json({status:'error'})
+        }
+        response.json({status:'ok',mensaje:'correo enviado'})
+    });
+
+
+
+
+
