@@ -60,13 +60,16 @@ h2 {
 .mainSection {
     background-color: #fcfde4;
     display: flex;
+    width:90%;
     margin: 5% 3% 5% 3%;
 }
 
 .articleSection {
     background-color: #ecf390;
     height: 700px;
-    margin: 0px 5px 0px 5px;
+    width: 100%;
+    padding: 0% 0%;
+    margin: 0px 0px 0px 0px;
     justify-content: center;
 }
 

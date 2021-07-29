@@ -147,7 +147,7 @@ function updateContactenos(request,response){
 }
 function deleteContacto(request,response){
     console.log("dentro de updateProveedor ");
-    var idUser = request.body.idUser;
+    var idCont = request.body.idCont;
    
     ContactenosN.findByIdAndDelete(idCont,(error, contUpdate) => {
         if (error) {

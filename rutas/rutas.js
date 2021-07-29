@@ -48,7 +48,7 @@ app.post('/proveedor', function(request, salida) {
         //salida.json({ stado: 'OK proveedor' });//este era el conflicto 27-07-2021
         UserController.proveedor(request, salida);
 });    
-app.post('/actualizarProveedor', function(request, response) {
+app.post('/actualizarProveedor', function(request, response) {    
     console.log('pase por rutas en actualizar\n');
     UserController.updateProveedor(request, response);
 });

@@ -85,7 +85,6 @@
         </div>
     </nav>
     <div class="container">
-
         <div class="col-2 col-md-2">
             <!--es para la seccion de noticias e interes-->
             <div class="offcanvas offcanvas-end" style="background-color: #ecf19e;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -119,7 +118,9 @@
                             </button>
                         <ul class="dropdown-menu fontLi" aria-labelledby="dropdownMenuButton">
                             <li><a class="dropdown-item fontLi" href="">Root</a></li>
-                            <li><a class="dropdown-item fontLi" href="">Contactenos</a></li>
+                            <li><a class="dropdown-item fontLi" href="#CrearContacto">Nuevo contacto</a></li>
+                            <li><a class="dropdown-item fontLi" href="#ModificaContacto">Modificar contacto</a></li>
+                            <li><a class="dropdown-item fontLi" href="#BorrarContacto">Borrar contacto</a></li>
                         </ul>
                     </div>
                 </div>
@@ -130,7 +131,7 @@
         <h2>
             Contactenos
         </h2>
-        <form action="/contactenos" method="post" class="classForm">
+        <form action="/contactenos" method="post" class="classForm" id="CrearContacto">
             <p class="texForm">Lo invitamos a llenar los siguientes datos:</p>
             <div class="containerForm">
                 <label style="margin-left: 5px;" for="nombre">Nombre</label>
@@ -173,6 +174,76 @@
                 <label style="margin-left: 20px;" for="opcion3">Manejo de costos</label>
                 <input type="checkbox" id="opcion3" name="costo">
             </div>
+            <div class="buttonform">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+        <h2>
+            Actualizar datos ingresados
+        </h2>
+        <form action="/actualizarContacto" method="post" class="classForm" id="ModificaContacto">
+            <p class="texForm">Desea modificar algo de lo ingresado:</p>
+            <div class="containerForm">
+                <label style="margin-left: 5px;" for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <label style="margin-left: 5px;" for="pApellido">Apellido</label>
+                <input type="text" id="pApellido" name="apellido" placeholder="Primer apellido" required>
+                <label style="margin-left: 5px;" for="sApellido">Apellido</label>
+                <input type="text" id="sApellido" name="apellido" placeholder="Segundo apellido" required>
+                <label style="margin-left: 5px;" for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            <p class="texForm">Datos adicionales:</p>
+            <div class="containerForm">
+                <label for="fNacimiento">Seleccione la fecha de nacimiento</label>
+                <input type="date" name="fNacimiento" id="fNacimiento">
+                <br>
+                <p>Seleccione el sexo</p>
+                <label for="mujer" style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  margin-left: 10px;">Mujer</label>
+                <input type="radio" id="mujer" name="genero" style="margin-left: 10px;">
+                <label for="hombre" style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  margin-left: 10px;">Hombre</label>
+                <input type="radio" id="hombre" name="genero" style="margin-left: 10px;">
+            </div>
+            <p class="texForm">Tu opinion cuenta:</p>
+            <div class="containerForm">
+                <label for="calif">Como califica nuestro trabajo</label>
+                <select name="frecuencia" id="calif" class="sectionOption">
+                    <option>-- - --</option>
+                    <option>Bueno</option>
+                    <option>Regular</option>
+                    <option>Lo recomendaría</option>
+                    <option>No lo recomendaría</option>
+                </select>
+            </div>
+            <p class="texForm">Que te gusta de esta selección:</p>
+            <div class="containerForm">
+                <label style="margin-left: 20px;" for="opcion1">Recetas </label>
+                <input type="checkbox" id="opcion1" name="receta">
+                <label style="margin-left: 20px;" for="opcion2">Consejos varios</label>
+                <input type="checkbox" id="opcion2" name="varios">
+                <label style="margin-left: 20px;" for="opcion3">Manejo de costos</label>
+                <input type="checkbox" id="opcion3" name="costo">
+            </div>
+            <div class="buttonform">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+        <h2>
+            Borrar datos ingresados 
+        </h2>
+        <form action="/borrarContacto" method="post" class="classForm" id="BorrarContacto">
+            <p class="texForm">Lo invitamos a llenar los siguientes datos apra borrar:</p>
+            <div class="containerForm">
+                <label style="margin-left: 5px;" for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <label style="margin-left: 5px;" for="pApellido">Apellido</label>
+                <input type="text" id="pApellido" name="apellido" placeholder="Primer apellido" required>
+                <label style="margin-left: 5px;" for="sApellido">Apellido</label>
+                <input type="text" id="sApellido" name="apellido" placeholder="Segundo apellido" required>
+                <label style="margin-left: 5px;" for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            
             <div class="buttonform">
                 <input type="submit" value="Enviar">
             </div>

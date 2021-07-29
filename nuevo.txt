@@ -2,3 +2,6 @@ la idea es comfirmar el uso de github escritorio ya qeu vscode y sourcetree geen
 esta es para ver si esta funcinando la coneccion
 con github 
 es 26-07-21 despues de haver reinstalado el ofice
+
+consultar para ver luego
+https://www.youtube.com/watch?v=X2ZiG7Q5Pb8&ab_channel=render2web
